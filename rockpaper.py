@@ -4,7 +4,7 @@ user1 = str(input("enter your name: "))
 user2 = str(input("and your name: "))
 
 user1_answer = input("%s, do you want to choose rock,paper or scissor? " %user1)
-user2_answer = input("%s, do you want to choose rock,paper or scissor? " %user2)
+user2_answer = input("%s, do you want to choose rock,paper or scissor?" %user2)
 
 def compare(u1, u2):
     if u1 == u2:
