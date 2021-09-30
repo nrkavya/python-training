@@ -11,7 +11,8 @@ class Employee:
 
 
 class TimeSheet(Employee):
-    def __init__(self,date,no_of_hours,activity,description,status):
+    def __init__(self, date, no_of_hours, activity, description, status, name, id, sal, dept):
+        Employee.__init__(self, name, id, sal, dept)
         self.date = date
         self.no_of_hours = no_of_hours
         self.activity = activity
@@ -20,17 +21,14 @@ class TimeSheet(Employee):
 
 
     def createTimeSheet(self):
-        print ("date :", self.date, "Num of hours :", self.no_of_hours, "activity :", self.activity, "description :", self.description, "status :", self.status)
+        print ("date :", self.date, "Num of hours :", self.no_of_hours, "activity :", self.activity, "description :", self.description, "status :", self.status, "name :", self.name, "id :", self.id, "salary :", self.sal, "dept :",self.dept)
 
 
-emp1 = Employee("kavya","3245","350000","hr")
-emp2 = Employee("varshitha","5674","500000","accounting")
-emp1.displayEmployee()
-emp2.displayEmployee()
-
-p = TimeSheet("22/1/21","40","none","filled","ok")
-p.createTimeSheet()
-
+e1=Employee('kavya','1345','5000','do')
+e1.displayEmployee()
+e1=TimeSheet('28/09/2021','8','python training','basics','completed','kavya','1345','25000','do')
+e1.displayEmployee()
+e1.createTimeSheet()
 
 
 
